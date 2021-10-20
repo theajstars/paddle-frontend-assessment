@@ -13,10 +13,14 @@
   background: #ba55d3;
   border-radius: 4px;
   outline: none;
-  border: 2px solid #ba55d3;
+  border: none;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.start-today:hover {
+  background: #642c72;
 }

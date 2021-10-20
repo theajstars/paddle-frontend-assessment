@@ -1,14 +1,44 @@
 import { Container } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
+
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 import JumboImage from "../assets/img/top-jumbo-bg.jpg";
 import FeatureSectionImage from "../assets/img/feature-section-background.jpg";
+
 import PlanImage1 from "../assets/img/pricing_images/pricing1.jpg";
 import PlanImage2 from "../assets/img/pricing_images/pricing2.jpg";
 import PlanImage3 from "../assets/img/pricing_images/pricing3.jpg";
 
+import BrandNetflix from "../assets/img/brands/netflix.png";
+import BrandReddit from "../assets/img/brands/reddit.png";
+import BrandAmazon from "../assets/img/brands/amazon1.png";
+import BrandDiscord from "../assets/img/brands/discord.png";
+import BrandSpotify from "../assets/img/brands/spotify.png";
+
+import Customer1 from "../assets/img/customers/customer1.png";
+import Customer2 from "../assets/img/customers/customer2.png";
+import Customer3 from "../assets/img/customers/customer3.png";
+import Footer from "./Footer";
+
 export default function Home() {
+  const [numberOfSlides, updateNumberOfSlides] = useState(3);
+  const [sliderRef] = useKeenSlider({
+    slidesPerView: numberOfSlides,
+    mode: "free",
+    spacing: 15,
+    autoAdjustSlidesPerView: 2,
+  });
+  useEffect(() => {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 1000 && window.innerWidth > 600) {
+      updateNumberOfSlides(2);
+    } else if (window.innerWidth <= 600) {
+      updateNumberOfSlides(1);
+    }
+  }, []);
   return (
     <>
       <Container maxWidth="lg">
@@ -72,7 +102,8 @@ export default function Home() {
               <br />
               Mauris ac libero eu sem finibus lacinia nec pulvinar
             </p>
-
+            <br />
+            <br />
             <ul>
               <li className="feature-item text-dark">Curabitur tempor justo</li>
               <li className="feature-item text-dark">Curabitur tempor justo</li>
@@ -179,8 +210,242 @@ export default function Home() {
             Praesent mollis lobortis nisl nec laoreet. Duis euismod nisl nec
             ante <br /> egestas ullamcorper
           </p>
-          <button className="start-today rubik">Start Today</button>
+          <button className="start-today rubik flex-row">Start Today</button>
         </div>
+
+        <div className="brands flex-row">
+          <div className="brands-1 flex-row">
+            <img src={BrandNetflix} alt="" className="brand" />
+            <img src={BrandReddit} alt="" className="brand" />
+            <img src={BrandAmazon} alt="" className="brand" />
+          </div>
+          <div className="brands-1 flex-row">
+            <img src={BrandSpotify} alt="" className="brand" />
+            <img src={BrandDiscord} alt="" className="brand" />
+          </div>
+        </div>
+
+        <div className="customers flex-column">
+          <div className="body-head customers-head">
+            Trusted by Thousands of <br /> Happy Customers
+          </div>
+          <br />
+          <p className="text-dark choose-plan-text">
+            Nam laoreet cursus diam, sed tristique arcu semper non. Suspendisse
+            et <br /> suscipit est, nec laoreet mi. Nunc pellentesque imperdiet
+            ultricies.
+          </p>
+
+          <div ref={sliderRef} className="feedbacks">
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer1} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Viezh Robert
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Warsaw, Poland
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer2} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Yessica Christy
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Shanxi, China
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer3} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Kim Young Jou
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Seoul, South Korea
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer1} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Viezh Robert
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Warsaw, Poland
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer2} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Yessica Christy
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Shanxi, China
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+
+            <div className="keen-slider__slide feedback flex-column">
+              <div className="feedback-top-row flex-row">
+                <div className="flex-row" style={{ alignItems: "center" }}>
+                  <img src={Customer3} alt="" className="feedbacker-image" />
+                  <div className="flex-column">
+                    <span className="text-darker feedbacker-name">
+                      Kim Young Jou
+                    </span>
+                    <span className="feedbacker-location text-dark">
+                      Seoul, South Korea
+                    </span>
+                  </div>
+                </div>
+                <span className="text-darker feedbacker-rating flex-row">
+                  4.5
+                  <i
+                    className="fas fa-star"
+                    style={{
+                      color: "#FEA250",
+                      marginLeft: "6px",
+                      fontSize: "15px",
+                    }}
+                  ></i>
+                </span>
+              </div>
+              <p className="feedback-text">
+                “Mauris sem neque, ultrices nec sapien id, consequat laoreet
+                dolor. Ut rhoncus sollicitudin metus, ac lobortis felis
+                dignissim et. Fusce arcu ex”
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <center>
+          <div className="subscribe-section flex-row">
+            <div className="flex-column">
+              <span className="body-head sub-head">
+                Subscribe Now for <br /> Get Special Features!
+              </span>
+              <br />
+              <p className="text-dark rubik feature-text sub-text">
+                Praesent mollis lobortis nisl nec laoreet.
+              </p>
+            </div>
+            <button className="subscribe-btn rubik">Subscribe Now</button>
+          </div>
+        </center>
+
+        <Footer />
       </Container>
     </>
   );

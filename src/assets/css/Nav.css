@@ -1,3 +1,6 @@
+a {
+  text-decoration: none !important;
+}
 .open-menu,
 .close-menu {
   display: none;
@@ -73,6 +76,7 @@ div.small-nav-items {
   }
   a.nav-action {
     padding: 7px 22px;
+    text-decoration: none;
   }
   div.nav-items {
     display: none;

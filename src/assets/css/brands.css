@@ -1,0 +1,33 @@
+.brands {
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+.brands-1 {
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  height: 60px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1050px) {
+  div.brands {
+    flex-direction: column;
+  }
+  .brands-1 {
+    margin: 10px 0px;
+  }
+}
+@media screen and (max-width: 640px) {
+  img.brand {
+    width: 120px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  img.brand {
+    width: 100px;
+    height: 40px;
+  }
+}

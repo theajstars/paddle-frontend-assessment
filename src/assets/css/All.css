@@ -3,6 +3,10 @@
 @import url("./features.css");
 @import url("./choose_plans.css");
 @import url("./start_paddle.css");
+@import url("./brands.css");
+@import url("./customers.css");
+@import url("./subscribe.css");
+@import url("./footer.css");
 * {
   transition: 0.12s;
 }

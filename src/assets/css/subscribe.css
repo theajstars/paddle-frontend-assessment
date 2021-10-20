@@ -1,0 +1,38 @@
+.subscribe-section {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1050px;
+  padding: 20px;
+  margin-top: 120px;
+  min-height: 250px;
+  box-shadow: 0px 50px 200px -104px #0d1025;
+
+  box-sizing: border-box;
+}
+.sub-head,
+.sub-text {
+  text-align: left;
+}
+.subscribe-btn {
+  width: 250px;
+  height: 60px;
+  background: #ba55d3;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.subscribe-btn:hover {
+  background: #642c72;
+}
+
+@media screen and (max-width: 750px) {
+  div.subscribe-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
