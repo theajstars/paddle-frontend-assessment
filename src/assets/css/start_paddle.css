@@ -1,0 +1,22 @@
+.start-paddle-section {
+  margin-top: 160px;
+  align-items: center;
+  min-height: 280px;
+  justify-content: space-between;
+}
+.start-paddle-head {
+  text-align: center;
+}
+.start-today {
+  width: 270px;
+  height: 63px;
+  background: #ba55d3;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #ba55d3;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+}

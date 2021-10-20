@@ -2,6 +2,7 @@
 @import url("./jumbo.css");
 @import url("./features.css");
 @import url("./choose_plans.css");
+@import url("./start_paddle.css");
 * {
   transition: 0.12s;
 }

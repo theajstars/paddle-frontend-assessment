@@ -46,6 +46,7 @@ div.small-nav-items {
 }
 .nav-action {
   padding: 7px 30px;
+  text-decoration: none;
   font-weight: 500;
 }
 .sign-in {
@@ -92,5 +93,20 @@ div.small-nav-items {
   }
   div.small-nav-items .nav-item {
     margin: 30px 0px;
+  }
+}
+@media screen and (max-width: 450px) {
+  a.peddle-logo {
+    font-size: 25px;
+    margin-left: -10px;
+  }
+  div.nav-actions {
+    margin-right: -20px;
+  }
+  a.nav-action {
+    padding: 5px 0px;
+    width: 100px;
+    text-align: center;
+    margin: 0px;
   }
 }
