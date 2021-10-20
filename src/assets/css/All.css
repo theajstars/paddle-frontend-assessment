@@ -1,0 +1,45 @@
+@import url("../fonts/fonts.css");
+@import url("../jumbo.css");
+@import url("../features.css");
+@import url("../choose_plans.css");
+* {
+  transition: 0.12s;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  /* background: #e5e5e5; */
+}
+.peddle-logo {
+  font-family: "Ranchers", cursive;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ba55d3;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.text-dark {
+  color: #4f5665;
+}
+.text-darker {
+  color: #0b132a;
+}
+.ranchers {
+  font-family: "Ranchers", cursive;
+}
+.rubik {
+  font-family: "Rubik", sans-serif;
+}
+.body-head {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+}
+.none {
+  display: none;
+}
