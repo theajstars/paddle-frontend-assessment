@@ -21,25 +21,51 @@ export default function Footer() {
         </div>
         <div className="footer-sections flex-row">
           <div className="footer-column flex-column">
-            <span className="text-darker footer-head">Product</span>
-            <span className="footer-item text-dark">Praesent</span>
-            <span className="footer-item text-dark">Laoreet</span>
-            <span className="footer-item text-dark">Laoreet</span>
-            <span className="footer-item text-dark">Server</span>
+            <Link to="/" className="text-darker footer-head">
+              Product
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Praesent
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Laoreet
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Laoreet
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Server
+            </Link>
           </div>
 
           <div className="footer-column flex-column">
-            <span className="text-darker footer-head">Engage</span>
-            <span className="footer-item text-dark">Mauris</span>
-            <span className="footer-item text-dark">Aenean</span>
-            <span className="footer-item text-dark">Linsean</span>
-            <span className="footer-item text-dark">Lingula</span>
+            <Link to="/" className="text-darker footer-head">
+              Engage
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Mauris
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Aenean
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Linsean
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Lingula
+            </Link>
           </div>
 
           <div className="footer-column flex-column">
-            <span className="text-darker footer-head">Earn money</span>
-            <span className="footer-item text-dark">Ultrices</span>
-            <span className="footer-item text-dark">Fusce</span>
+            <Link to="/" className="text-darker footer-head">
+              Earn money
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Ultrices
+            </Link>
+            <Link to="/" className="footer-item text-dark">
+              Fusce
+            </Link>
           </div>
         </div>
       </div>

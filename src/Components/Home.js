@@ -25,11 +25,16 @@ import Footer from "./Footer";
 
 export default function Home() {
   const [numberOfSlides, updateNumberOfSlides] = useState(3);
-  const [sliderRef] = useKeenSlider({
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [sliderRef, slider] = useKeenSlider({
+    initial: 0,
     slidesPerView: numberOfSlides,
     mode: "free",
     spacing: 15,
     autoAdjustSlidesPerView: 2,
+    slideChanged(s) {
+      setCurrentSlide(s.details().relativeSlide);
+    },
   });
   useEffect(() => {
     console.log(window.innerWidth);
@@ -427,6 +432,35 @@ export default function Home() {
                 dignissim et. Fusce arcu ex”
               </p>
             </div>
+          </div>
+
+          <div className="flex-row slider-controls">
+            {slider && (
+              <>
+                <span
+                  className={`slider-action ${
+                    currentSlide === 0 ? "slider-action-disabled" : ""
+                  }`}
+                  onClick={(e) => {
+                    e.stopPropagation() || slider.prev();
+                  }}
+                  disabled={currentSlide === 0}
+                >
+                  <i className="far fa-long-arrow-left"></i>
+                </span>
+                <span
+                  className={`slider-action ${
+                    currentSlide === 3 ? "slider-action-disabled" : ""
+                  }`}
+                  onClick={(e) => {
+                    e.stopPropagation() || slider.next();
+                  }}
+                  disabled={currentSlide === slider.details().size - 1}
+                >
+                  <i className="far fa-long-arrow-right"></i>
+                </span>
+              </>
+            )}
           </div>
         </div>
 
