@@ -1,7 +1,7 @@
 @import url("../fonts/fonts.css");
-@import url("../jumbo.css");
-@import url("../features.css");
-@import url("../choose_plans.css");
+@import url("./jumbo.css");
+@import url("./features.css");
+@import url("./choose_plans.css");
 * {
   transition: 0.12s;
 }

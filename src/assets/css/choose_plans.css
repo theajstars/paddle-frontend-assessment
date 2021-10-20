@@ -1,0 +1,14 @@
+.choose-plan-section {
+  margin-top: 160px;
+  align-items: center;
+  width: 100%;
+}
+
+.choose-plan-text {
+  text-align: center;
+  line-height: 30px;
+}
+.plans {
+  justify-content: space-between;
+  width: 100%;
+}

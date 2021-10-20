@@ -79,7 +79,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="choose-plan-section">
+        <div className="choose-plan-section flex-column">
           <span className="body-head">Choose Your Plan</span>
           <p className="text-dark choose-plan-text">
             Let's choose the package that is best for you and explore it happily
@@ -87,6 +87,8 @@ export default function Home() {
             <br />
             cheerfully
           </p>
+
+          <div className="plans flex-row"></div>
         </div>
       </Container>
     </>
