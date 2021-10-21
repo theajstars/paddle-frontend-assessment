@@ -28,20 +28,20 @@ export default function Nav() {
         <i className="fad fa-bars"></i>
       </span>
       <nav className="nav-container flex-row">
-        <Link to="/" className="peddle-logo">
+        <Link to="/homepage" className="peddle-logo">
           PEDDLE
         </Link>
         <div className="nav-items flex-row">
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             About
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             FAQs
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             Pricing
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             Testimonials
           </Link>
         </div>
@@ -54,25 +54,25 @@ export default function Nav() {
             x: menuAnimate,
           }}
         >
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             About
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             FAQs
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             Pricing
           </Link>
-          <Link className="nav-item rubik text-dark" to="/">
+          <Link className="nav-item rubik text-dark" to="/homepage">
             Testimonials
           </Link>
         </motion.div>
 
         <div className="nav-actions flex-row">
-          <Link className="rubik text-darker nav-action sign-in" to="/">
+          <Link className="rubik text-darker nav-action sign-in" to="/homepage">
             Sign In
           </Link>
-          <Link className="rubik nav-action sign-up" to="/">
+          <Link className="rubik nav-action sign-up" to="/homepage">
             Sign Up
           </Link>
         </div>

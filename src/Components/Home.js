@@ -52,7 +52,7 @@ export default function Home() {
     <>
       <Container maxWidth="lg">
         <Nav />
-        <div className="jumbotron flex-row">
+        <div id="home" className="jumbotron flex-row">
           <div className="jumbo-left flex-column">
             <span className="jumbo-head rubik text-darker">
               We Are Everything We Aspire To BE
