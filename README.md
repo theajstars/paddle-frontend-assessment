@@ -19,4 +19,4 @@
 
 6)Build project `yarn run build` or `npm run build`
 
-7. Project is hosted live at https://theajstars-paddle-assessment.netlify.app/
+7. Project is hosted live at https://theajstars-paddle-assessment.netlify.app/homepage
