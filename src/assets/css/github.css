@@ -1,0 +1,81 @@
+.github-page-container {
+  padding-top: 90px;
+}
+b {
+  font-weight: 500;
+}
+.repositories {
+  width: 100%;
+  box-sizing: border-box;
+}
+.repo {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 95vw;
+  max-width: 900px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  align-items: center;
+  min-height: 120px;
+}
+
+.repo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin-right: 10px;
+}
+.repo-details {
+  justify-content: space-between;
+  min-height: 80px;
+}
+.repo-title {
+  font-size: 22px;
+  height: fit-content;
+}
+.repo-description {
+  font-size: 15px;
+}
+.repo-prop {
+  margin-right: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  padding: 3px 0px;
+  width: 100px;
+  text-align: center;
+}
+.back-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.pag-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  div.repo-row {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    min-height: 90px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div.repo {
+    max-width: 350px;
+  }
+  span.repo-title {
+    font-size: 20px;
+  }
+  span.repo-title,
+  p.repo-description {
+    max-width: 250px;
+  }
+}

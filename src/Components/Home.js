@@ -42,6 +42,8 @@ export default function Home() {
   //Get screen width on component mount
   //This will determine the number of slides to show per frame
   useEffect(() => {
+    document.title = "Paddle Demo | Home";
+
     if (window.innerWidth < 1000 && window.innerWidth > 600) {
       updateNumberOfSlides(2);
     } else if (window.innerWidth <= 600) {
