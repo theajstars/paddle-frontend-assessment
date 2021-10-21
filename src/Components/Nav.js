@@ -6,12 +6,10 @@ export default function Nav() {
   const [isMenuActive, setMenuActive] = useState(false);
   const [menuAnimate, setMenuAnimation] = useState("100vw");
   function openMenu() {
-    console.log("Open");
     setMenuAnimation("-250px");
     setMenuActive(true);
   }
   function closeMenu() {
-    console.log("Closed");
     setMenuAnimation("100vw");
     setMenuActive(false);
   }

@@ -26,6 +26,8 @@ import Footer from "./Footer";
 export default function Home() {
   const [numberOfSlides, updateNumberOfSlides] = useState(3);
   const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  //Initialize keen slider
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
     slidesPerView: numberOfSlides,
@@ -36,8 +38,10 @@ export default function Home() {
       setCurrentSlide(s.details().relativeSlide);
     },
   });
+
+  //Get screen width on component mount
+  //This will determine the number of slides to show per frame
   useEffect(() => {
-    console.log(window.innerWidth);
     if (window.innerWidth < 1000 && window.innerWidth > 600) {
       updateNumberOfSlides(2);
     } else if (window.innerWidth <= 600) {
